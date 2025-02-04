@@ -1,0 +1,75 @@
+/*Navigation Components Begin*/
+#navigation{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: center;
+    background: white;
+}
+
+#navigation ul{
+    display: flex;
+    flex-direction: row;
+    gap: 6em;
+    list-style-type: none;
+    background-color: #84B59F;
+    border-radius: 0.5%;
+    padding: 1.5rem;
+}
+
+#navigation ul a{
+    color: white;
+    text-decoration: none;
+}
+
+#navigation ul a:hover{
+    color: #DDD8C4;
+}
+
+
+/*Navigation Components End*/
+
+/*The Title Component */
+#nameComp{
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+/*End of the Title Component */
+
+/*Body of the Page*/
+body{
+    background-color:#50808E; 
+}
+/* End of the body of the page*/
+
+/* Begin Flex Box of Gallery Section*/
+#gallery ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 200px;
+    height: auto;
+}
+/* End Flex Box of Gallery Section*/
+
+#outreach ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 200px;
+    height: auto;
+}
