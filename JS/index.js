@@ -25,9 +25,9 @@ function fetchArtworks(){
       const li = document.createElement("li");
       const img=document.createElement("img");
       img.src=imgURL;
-      img.width=200;
+      img.width=200;//This needs to be in the css, append to new element after the image
       //innertext of the li element
-      li.innerText = project;
+      li.innerText = project; //Switch line 30 and 31, create whole new element, the p element in the li
       li.appendChild(img);
       projectList.appendChild(li);
   }
