@@ -22,13 +22,14 @@ function fetchArtworks(){
       const project = artworks[i].title;
       const identifier=artworks[i].image_id;
       const imgURL=`https://www.artic.edu/iiif/2/${identifier}/full/843,/0/default.jpg`
-      const li = document.createElement("li");
+      const li= document.createElement("li");
       const img=document.createElement("img");
       img.src=imgURL;
-      img.width=200;//This needs to be in the css, append to new element after the image
+      // img.width=200;//This needs to be in the css, append to new element after the image
       //innertext of the li element
       li.innerText = project; //Switch line 30 and 31, create whole new element, the p element in the li
       li.appendChild(img);
+      // li.innerText = project; //Switch line 30 and 31, create whole new element, the p element in the li
       projectList.appendChild(li);
   }
  })
@@ -106,13 +107,14 @@ function fetchExhibits(){
         const li = document.createElement("li");
         const img=document.createElement("img");
         img.src=imgURL; 
-        img.width=200;
+        // img.width=200;
         //innertext of the li element
         li.innerText = exhibitName;
         li.appendChild(img);
         exhibitList.appendChild(li);
     }
    })
+
   
   
         .catch((error)=>{
@@ -128,3 +130,16 @@ function fetchExhibits(){
 
 
 //////////////////////////////////////////////////////////////////
+//Date
+const today=new Date()
+const thisYear=today.getFullYear()
+
+//Footer Part
+const footer=document.createElement("footer")
+const body=document.querySelector("body")
+body.appendChild(footer)
+
+//Copywrite
+const copyright=document.createElement("p")
+copyright.innerHTML=` © I.Mejia ${thisYear} `
+footer.appendChild(copyright)
