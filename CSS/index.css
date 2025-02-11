@@ -159,11 +159,14 @@ body h2{
 }
 
 #outreach ul li {
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* margin-left: 10%; */
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 10%;
+    max-width: 100%;
+    height: auto;
+    color: black;
   }
 /* The Connect Section For The Links */
  
