@@ -1,43 +1,79 @@
 /*Navigation Components Begin*/
 #navigation{
-    position: sticky;
+    position:sticky;
     top: 0;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     box-sizing: border-box;
     align-items: center;
-    background: white;
+    background:#466E9D;
+    border-style:groove;
+    border-color:aliceblue;
+    border-width:2dvi;
+
 }
 
 #navigation ul{
     display: flex;
     flex-direction: row;
-    gap: 6em;
+    gap: 4em;
     list-style-type: none;
-    background-color: #84B59F;
+    background-color:#466E9D;
+    align-items: center;
     border-radius: 0.5%;
     padding: 1.5rem;
+    color: white;
 }
 
 #navigation ul a{
     color: white;
     text-decoration: none;
+    font-size: larger;
 }
 
 #navigation ul a:hover{
     color: #DDD8C4;
 }
 
+#aboutUs h2{
+    text-align: left;
+}
+#gallery h2{
+    text-align: left;
+
+}
+#featured {
+    text-align: center;
+}
+#artist {
+    text-align: center;
+}
+
+#connect{
+    text-align: center;   
+    /* justify-content: center; */
+}
+#connect li a{
+    text-align: center;
+    /* justify-content: center; */
+}
 
 /*Navigation Components End*/
-
+/* The artist part */
+#profiles ul{
+    list-style-type: disc;
+}
+#profiles ul li:hover{
+    color: #FDB0c0;
+}
 /*The Title Component */
 #nameComp{
     font-family: "Lora", serif;
     font-style: italic;
     font-size: 3rem;
     text-align: center;
-    color: white;
+    color: #466E9D;
     margin-left: 15px;
     margin-right: 15px;
 
@@ -46,30 +82,133 @@
 
 /*Body of the Page*/
 body{
-    background-color:#50808E; 
+    background-color:white; 
+    color:#466E9D;
+    gap: 10%;
+    text-align: left;
+    padding: 1.5rem;
 }
+
+body section{
+    padding: 1.5rem;
+    margin: 20px;
+    color:black;
+    font-weight: normal;
+    font-size: large;
+    border-style: none none solid none;
+    border-color: #FADADD;
+}
+body section p{
+    text-align: center;
+    padding: 1.5rem;
+    border-width:1dvi;
+    border-style:groove;
+    border-color: #dae2eb #466e9d #dae2eb #466e9d;
+}
+
 /* End of the body of the page*/
+body h2{
+    font-weight: bold;
+    color:#FDB0c0;
+    font-style: italic;
+    font-size:3 rem ;
+}
 
 /* Begin Flex Box of Gallery Section*/
 #gallery ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    /* border-style:groove;
+    border-width: 3dvi; */
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 10px 40px; 
+    width: 100%;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
+
 }
+
+#gallery ul li {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 10%;
+    max-width: 100%;
+    height: auto;
+    color: black;
+  
+}
+
 /* End Flex Box of Gallery Section*/
 
 #outreach ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px 40px; 
+    width: 100%;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
 }
+
+#outreach ul li {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 10%;
+    max-width: 100%;
+    height: auto;
+    color: black;
+  }
+/* The Connect Section For The Links */
+ 
+ #outreach ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;   
+    color: #A47DAB;
+} 
+
+/* Media Queries Part */
+#gallery img {
+    max-width: 100%;
+    height: auto;     
+    margin: 0 auto;   
+}
+#outreach img{
+    max-width: 100%;
+    height: auto;     
+    margin: 0 auto; 
+}
+/*Max-width 1000px*/
+/* @media (max-width: 1000px) {
+
+} */
+
+/*Max-width 800px*/
+@media (max-width: 800px) {
+    #gallery ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #outreach ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #navigation ul {
+        flex-direction: column; 
+        padding: 1rem; 
+        gap: 2em;
+    }
+}
+
