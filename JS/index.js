@@ -21,7 +21,7 @@ function fetchArtworks(){
     for (let i=0; i < artworks.length; i++){
       const project = artworks[i].title;
       const identifier=artworks[i].image_id;
-      console.log(artworks[i]);
+      // console.log(artworks[i]);
       if(identifier!==null){
         const imgURL=`https://www.artic.edu/iiif/2/${identifier}/full/843,/0/default.jpg`
         const li= document.createElement("li");
@@ -121,7 +121,6 @@ function fetchExhibits(){
     }
   }) 
 
-  
   
   .catch((error)=>{
     console.log(error);
